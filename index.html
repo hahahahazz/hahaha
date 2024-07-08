@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>평균점수</title>
+    <style>
+        h1 {
+            background-color: lightseagreen;
+            color: beige;
+        }
+    </style>
+</head>
+
+<body>
+    국어, 수학, 영어 점수를 입력 받아 평균 점수를 나타내세요.
+    <script>
+        let kor = Number(prompt("국어점수를 입력하세요."));
+        let math = Number(prompt("수학점수를 입력하세요."));
+        let english = Number(prompt("영어 점수를 입력하세요."));
+
+        let sum = kor + math + english;
+        let avg = sum / 3;
+        let result = (kor + math + english) / 3;
+        document.write("<h1>평균 점수는 ", + result + "점 입니다.<h1>");
+
+        if (result >= 90){massage ="축 합격 A 등급 입니다.";}        
+        else if (result >= 80){massage = "축 B 등급 입니다!";}
+        else if (result >= 70){massage = "축 C 등급 입니다!";}
+        else if (result >= 60){massage = "축 재시험 대상자 입니다!";}
+        else massage = "축 당신은 공부를 하지 않았군요.";
+        
+        document.write(massage);
+
+    </script>
+</body>
+
+</html>
